@@ -4,7 +4,6 @@ import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
 
-
 const btnStart = document.querySelector('button[data-start]');
 const input = document.querySelector('#datetime-picker');
 const day = document.querySelector('span[data-days]');
@@ -39,13 +38,10 @@ function convertMs(ms) {
   const hour = minute * 60;
   const day = hour * 24;
 
-  // Remaining days
+  
   const days = Math.floor(ms / day);
-  // Remaining hours
   const hours = Math.floor((ms % day) / hour);
-  // Remaining minutes
   const minutes = Math.floor(((ms % day) % hour) / minute);
-  // Remaining seconds
   const seconds = Math.floor((((ms % day) % hour) % minute) / second);
 
   return { days, hours, minutes, seconds };
