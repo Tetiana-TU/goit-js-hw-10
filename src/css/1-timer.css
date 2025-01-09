@@ -76,4 +76,8 @@ input:active {
 .main-title {
     margin-bottom: 50px;
 }
-
+.cont-input-data {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
